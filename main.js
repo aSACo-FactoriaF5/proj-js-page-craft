@@ -13,6 +13,8 @@ console.log(companyData);
 //señalar elementos
 const tituloDOM = document.getElementById("companyName")
 const imagenDOM = document.getElementById("companyImage")
+const claimDOM = document.getElementById("companyClaim")
+const textDOM = document.getElementById("companyText")
 
 console.log(tituloDOM)
 
@@ -23,3 +25,11 @@ tituloDOM.textContent = companyData.name      //tmb funciona amb innerHTML
 
 console.log(imagenDOM)
 imagenDOM.setAttribute("src", companyData.imageUrl)
+
+
+console.log(claimDOM)
+claimDOM.textContent = companyData.claim
+
+
+console.log(textDOM)
+textDOM.textContent = companyData.text
