@@ -1,7 +1,7 @@
 const companyData = {
   name: "TITULO RARO",
-  primaryColor: "red",    //base.css line11
-  backgroundColor: "red", //base.css line10
+  primaryColor: "#ffffff",    //base.css line11
+  backgroundColor: "#000000", //base.css line10
   claim: "We make the best widgets",
   text: "We are the best company in the world, except for the other companies that are better than us.",
   imageUrl:
@@ -47,3 +47,9 @@ console.log(primaryColorDOM)
 function changePrimaryColor(primaryColor) {
   document.documentElement.style.setProperty('--primary-color', primaryColor);
 }
+
+function changeBackgroundColor()   
+ {
+      const root = document.documentElement;
+      root.style.setProperty('--back-color', companyData.backgroundColor);
+ }
