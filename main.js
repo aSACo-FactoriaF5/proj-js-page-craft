@@ -45,3 +45,11 @@ console.log('Nuevo primary-color:', getComputedStyle(root).getPropertyValue('--p
 console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back-color'));
 
  //EPIC:2
+
+ //id="editCompanyBtn"   onClick="desplegableFormulario" 
+//function toggleForm() {
+  //boton.addEventListener('onClick', function() {
+  //mensaje.textContent = '¡El botón fue clicado!';
+  //});
+//}  
+ 
