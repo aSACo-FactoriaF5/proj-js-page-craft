@@ -1,7 +1,7 @@
 const companyData = {
   name: "TITULO RARO",
-  primaryColor: "#ffffff",    //base.css line11
-  backgroundColor: "#000000", //base.css line10
+  primaryColor: "pink",    //base.css line11
+  backgroundColor: "blue", //base.css line10
   claim: "We make the best widgets",
   text: "We are the best company in the world, except for the other companies that are better than us.",
   imageUrl:
@@ -11,46 +11,62 @@ const companyData = {
 console.log(companyData);
 
 //señalar elementos
+
+//const newPrimaryColor = '#pink'
+const root = document.documentElement
 const tituloDOM = document.getElementById("companyName")
 const imagenDOM = document.getElementById("companyImage")
 const claimDOM = document.getElementById("companyClaim")
 const textDOM = document.getElementById("companyText")
 const primaryColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
-//const primaryDOM = document.getElementsByClassName("--primary-color")
+const backgroundColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--back-color');
 //const backcolorDOM = document.getElementById("--back-color")
 //const primarycolorDOM = document.getElementById("-primary-color")
 
 
-
+//modificacion de atributos
+tituloDOM.textContent = companyData.name      //tmb funciona con innerHTML
+document.title = companyData.name
 console.log(tituloDOM)
 
-//modificacion de atributos
-document.title = companyData.name
-tituloDOM.textContent = companyData.name      //tmb funciona amb innerHTML
-
-
-console.log(imagenDOM)
-imagenDOM.setAttribute("src", companyData.imageUrl)
-
-
-console.log(claimDOM)
 claimDOM.textContent = companyData.claim
+console.log(claimDOM)
 
+imagenDOM.setAttribute("src", companyData.imageUrl)
+console.log(imagenDOM)
 
-console.log(textDOM)
 textDOM.textContent = companyData.text
+console.log(textDOM)
 
-//document.documentElement.style.setProperty('--primary-color', companyData.primaryColor);
-//intento de cambiar color console.log(primaryDOM)
-//intento de cambiar color primaryDOM.colorContent = companyData.primaryColor
 console.log(primaryColorDOM)
+console.log(backgroundColorDOM)
+
+// Cambiar el valor de las variables CSS
+root.style.setProperty('--primary-color', companyData.primaryColor);
+root.style.setProperty('--back-color', companyData.backgroundColor);
+
+console.log('Nuevo primary-color:', getComputedStyle(root).getPropertyValue('--primary-color'));
+console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back-color'));
+
+
+
+//intento de cambiar color primaryDOM.colorContent = companyData.primaryColor
+
+//try:0 // document.documentElement.style.setProperty('--primary-color', companyData.primaryColor);
+/*try1
 function changePrimaryColor(primaryColor) {
   document.documentElement.style.setProperty('--primary-color', primaryColor);
-}
+}*/
 
-root.style.setProperty('--back-color', companyData.backgroundColor);
+/*try2
 function changeBackgroundColor()   
  {
       const root = document.documentElement;
       root.style.setProperty('--back-color', companyData.backgroundColor);
- }
+ }*/
+
+ //try3: root.style.setProperty('--back-color', companyData.backgroundColor);
+
+
+
+ //EPIC:2
