@@ -11,8 +11,6 @@ const companyData = {
 console.log(companyData);
 
 //señalar elementos
-
-//const newPrimaryColor = '#pink'
 const root = document.documentElement
 const tituloDOM = document.getElementById("companyName")
 const imagenDOM = document.getElementById("companyImage")
@@ -20,12 +18,10 @@ const claimDOM = document.getElementById("companyClaim")
 const textDOM = document.getElementById("companyText")
 const primaryColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
 const backgroundColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--back-color');
-//const backcolorDOM = document.getElementById("--back-color")
-//const primarycolorDOM = document.getElementById("-primary-color")
 
 
 //modificacion de atributos
-tituloDOM.textContent = companyData.name      //tmb funciona con innerHTML
+tituloDOM.textContent = companyData.name     
 document.title = companyData.name
 console.log(tituloDOM)
 
@@ -47,26 +43,5 @@ root.style.setProperty('--back-color', companyData.backgroundColor);
 
 console.log('Nuevo primary-color:', getComputedStyle(root).getPropertyValue('--primary-color'));
 console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back-color'));
-
-
-
-//intento de cambiar color primaryDOM.colorContent = companyData.primaryColor
-
-//try:0 // document.documentElement.style.setProperty('--primary-color', companyData.primaryColor);
-/*try1
-function changePrimaryColor(primaryColor) {
-  document.documentElement.style.setProperty('--primary-color', primaryColor);
-}*/
-
-/*try2
-function changeBackgroundColor()   
- {
-      const root = document.documentElement;
-      root.style.setProperty('--back-color', companyData.backgroundColor);
- }*/
-
- //try3: root.style.setProperty('--back-color', companyData.backgroundColor);
-
-
 
  //EPIC:2
