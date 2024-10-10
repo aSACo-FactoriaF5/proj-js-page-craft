@@ -1,7 +1,7 @@
 const companyData = {
   name: "TITULO RARO",
-  primaryColor: "#2c5545",    //base.css line11
-  backgroundColor: "#e3e3e3", //base.css line10
+  primaryColor: "red",    //base.css line11
+  backgroundColor: "red", //base.css line10
   claim: "We make the best widgets",
   text: "We are the best company in the world, except for the other companies that are better than us.",
   imageUrl:
@@ -15,6 +15,8 @@ const tituloDOM = document.getElementById("companyName")
 const imagenDOM = document.getElementById("companyImage")
 const claimDOM = document.getElementById("companyClaim")
 const textDOM = document.getElementById("companyText")
+const primaryColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+//const primaryDOM = document.getElementsByClassName("--primary-color")
 //const backcolorDOM = document.getElementById("--back-color")
 //const primarycolorDOM = document.getElementById("-primary-color")
 
@@ -38,4 +40,10 @@ claimDOM.textContent = companyData.claim
 console.log(textDOM)
 textDOM.textContent = companyData.text
 
-document.documentElement.style.setProperty('--primary-color', companyData.primaryColor);
+//document.documentElement.style.setProperty('--primary-color', companyData.primaryColor);
+//intento de cambiar color console.log(primaryDOM)
+//intento de cambiar color primaryDOM.colorContent = companyData.primaryColor
+console.log(primaryColorDOM)
+function changePrimaryColor(primaryColor) {
+  document.documentElement.style.setProperty('--primary-color', primaryColor);
+}
