@@ -15,6 +15,10 @@ const tituloDOM = document.getElementById("companyName")
 const imagenDOM = document.getElementById("companyImage")
 const claimDOM = document.getElementById("companyClaim")
 const textDOM = document.getElementById("companyText")
+//const backcolorDOM = document.getElementById("--back-color")
+//const primarycolorDOM = document.getElementById("-primary-color")
+
+
 
 console.log(tituloDOM)
 
@@ -33,3 +37,5 @@ claimDOM.textContent = companyData.claim
 
 console.log(textDOM)
 textDOM.textContent = companyData.text
+
+document.documentElement.style.setProperty('--primary-color', companyData.primaryColor);
