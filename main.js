@@ -46,10 +46,53 @@ console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back
 
  //EPIC:2
 
- //id="editCompanyBtn"   onClick="desplegableFormulario" 
-//function toggleForm() {
-  //boton.addEventListener('onClick', function() {
-  //mensaje.textContent = '¡El botón fue clicado!';
-  //});
-//}  
- 
+ //id="editCompanyBtn"   onClick="desplegableFormulario"
+ const formulario = document.getElementById('FormEdit'); //formContainer
+ const boton = document.getElementById('editCompanyBtn'); //editButton
+ const cerrarBoton = document.getElementById('closeCompanyFormBtn') 
+
+ console.log(boton)
+ console.log(formulario)
+ console.log(cerrarBoton)
+
+// Función para alternar la visibilidad del formulario:
+function toggleForm() {
+  formulario.classList.toggle('hidden') // Añade o quita la clase 'hidden' para mostrar/ocultar
+}
+
+// Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton'
+boton.addEventListener('click', toggleForm);
+cerrarBoton.addEventListener('click', toggleForm);
+
+//
+
+
+
+
+
+
+
+
+
+
+
+/*try:0
+function mostrarFormulario() {
+  mostrarFormulario.addEventListener("onclick", function());
+  formulario.style.display = 'block';
+}
+
+function ocultarFormulario() {
+  ocultarFormulario.addEventListener("onclick", function());
+  formulario.style.display = 'none';
+}*/
+
+/*try:1
+function toggleForm() {
+  //boton.preventDefault();
+  boton.addEventListener('onClick', function() {
+    console.log(toggleForm)
+    formulario.classList.toggle('oculto'); // Alternar entre las clases 'oculto' y 'visible'
+  });
+}*/ 
+
