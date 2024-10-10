@@ -48,6 +48,7 @@ function changePrimaryColor(primaryColor) {
   document.documentElement.style.setProperty('--primary-color', primaryColor);
 }
 
+root.style.setProperty('--back-color', companyData.backgroundColor);
 function changeBackgroundColor()   
  {
       const root = document.documentElement;
