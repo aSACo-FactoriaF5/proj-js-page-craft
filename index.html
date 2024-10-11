@@ -32,12 +32,12 @@
     </header>
 
     <section class="hero">
-      <button type="button" id="editCompanyBtn" class="open-edit-form-button" onclick="toggleForm()" > 
+      <button type="button" id="editCompanyBtn" class="open-edit-form-button"> <!--onclick="toggleForm()"  action"""-->
         <i class="fas fa-edit"></i> Edit Company
       </button>
 
       <div class="container">
-        <div class="hero-image">        <!-- companyData.imageURL-->
+        <div class="hero-image">                      <!-- companyData.imageURL-->
           <img
             id="companyImage"
             src="https://as1.ftcdn.net/v2/jpg/06/13/08/04/1000_F_613080459_saqr3TXzDUb5CtsG3bTNu6QL5DYRXBSf.jpg"  
@@ -57,7 +57,7 @@
       </div>
     </section>
 
-    <!-- ÉPICA2-->
+    <!-- whats-new -->
     <section class="whats-new">     
       <div class="container">
         <h2>NEWS & OFFERS</h2>
@@ -96,11 +96,11 @@
       </div>
     </section>
 
-    <section class="form-container hidden" id="companyForm">
+    <section class="form-container hidden" id="sectionCompanyForm">
       <div class="close-from-button" id="closeCompanyFormBtn">
         <span>x</span>
       </div>
-      <form action="" id="#companyForm">
+      <form action="" id="companyForm">
         <label for="company">Company name</label>
         <input type="text" name="company" id="companyNameInput" />
 
@@ -118,7 +118,7 @@
         <label for="secondary-color">Background color</label>
         <input type="color" name="secondary-color" id="backgroundColorInput" />
 
-        <label for="">Claim</label>
+        <label for="claim">Claim</label>
         <input type="text" name="claim" id="companyClaimInput" />
 
         <label for="text-area">Text</label>

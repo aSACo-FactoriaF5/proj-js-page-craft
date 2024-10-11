@@ -7,9 +7,9 @@ const companyData = {
   imageUrl:
     "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
 };
-
 console.log(companyData);
 
+//EPIC1:
 //señalar elementos
 const root = document.documentElement
 const tituloDOM = document.getElementById("companyName")
@@ -37,17 +37,19 @@ console.log(textDOM)
 console.log(primaryColorDOM)
 console.log(backgroundColorDOM)
 
-// Cambiar el valor de las variables CSS
+
+//cambiar el valor de las variables CSS
 root.style.setProperty('--primary-color', companyData.primaryColor);
 root.style.setProperty('--back-color', companyData.backgroundColor);
 
 console.log('Nuevo primary-color:', getComputedStyle(root).getPropertyValue('--primary-color'));
 console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back-color'));
 
- //EPIC:2
 
+
+ //EPIC:2
  //id="editCompanyBtn"   onClick="desplegableFormulario"
- const formulario = document.getElementById('FormEdit'); //formContainer
+ const formulario = document.getElementById('sectionCompanyForm'); 
  const boton = document.getElementById('editCompanyBtn'); //editButton
  const cerrarBoton = document.getElementById('closeCompanyFormBtn') 
 
@@ -57,14 +59,26 @@ console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back
 
 // Función para alternar la visibilidad del formulario:
 function toggleForm() {
-  formulario.classList.toggle('hidden') // Añade o quita la clase 'hidden' para mostrar/ocultar
+  if (formulario.classList.contains('hidden')) {
+    formulario.classList.remove('hidden'); // Mostrar el formulario
+  } else {
+    formulario.classList.add('hidden'); // Ocultar el formulario
+  }
 }
+
+function toggleForm() {
+  console.log('Formulario antes de cambiar:', formulario.classList);
+  
+  formulario.classList.toggle('hidden');
+  
+  console.log('Formulario después de cambiar:', formulario.classList);
+}
+
 
 // Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton'
 boton.addEventListener('click', toggleForm);
 cerrarBoton.addEventListener('click', toggleForm);
 
-//
 
 
 
@@ -76,23 +90,4 @@ cerrarBoton.addEventListener('click', toggleForm);
 
 
 
-/*try:0
-function mostrarFormulario() {
-  mostrarFormulario.addEventListener("onclick", function());
-  formulario.style.display = 'block';
-}
-
-function ocultarFormulario() {
-  ocultarFormulario.addEventListener("onclick", function());
-  formulario.style.display = 'none';
-}*/
-
-/*try:1
-function toggleForm() {
-  //boton.preventDefault();
-  boton.addEventListener('onClick', function() {
-    console.log(toggleForm)
-    formulario.classList.toggle('oculto'); // Alternar entre las clases 'oculto' y 'visible'
-  });
-}*/ 
 
