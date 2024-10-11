@@ -1,9 +1,9 @@
 const companyData = {
   name: "TITULO RARO",
-  primaryColor: "pink",    //base.css line11
-  backgroundColor: "blue", //base.css line10
   claim: "We make the best widgets",
   text: "We are the best company in the world, except for the other companies that are better than us.",
+  primaryColor: "pink",    //base.css line11
+  backgroundColor: "blue", //base.css line10
   imageUrl:
     "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
 };
@@ -18,33 +18,19 @@ const claimDOM = document.getElementById("companyClaim")
 const textDOM = document.getElementById("companyText")
 const primaryColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
 const backgroundColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--back-color');
+const saveButtonDOM = getElementById("buttonSave")
 
 
 //modificacion de atributos
 tituloDOM.textContent = companyData.name     
 document.title = companyData.name
-console.log(tituloDOM)
-
 claimDOM.textContent = companyData.claim
-console.log(claimDOM)
-
 imagenDOM.setAttribute("src", companyData.imageUrl)
-console.log(imagenDOM)
-
 textDOM.textContent = companyData.text
-console.log(textDOM)
-
-console.log(primaryColorDOM)
-console.log(backgroundColorDOM)
-
 
 //cambiar el valor de las variables CSS
 root.style.setProperty('--primary-color', companyData.primaryColor);
 root.style.setProperty('--back-color', companyData.backgroundColor);
-
-console.log('Nuevo primary-color:', getComputedStyle(root).getPropertyValue('--primary-color'));
-console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back-color'));
-
 
 
  //EPIC:2
@@ -53,11 +39,7 @@ console.log('Nuevo back-color:', getComputedStyle(root).getPropertyValue('--back
  const boton = document.getElementById('editCompanyBtn'); //editButton
  const cerrarBoton = document.getElementById('closeCompanyFormBtn') 
 
- console.log(boton)
- console.log(formulario)
- console.log(cerrarBoton)
-
-// Función para alternar la visibilidad del formulario:
+// formulario.classList.toggle('hidden')
 function toggleForm() {
   if (formulario.classList.contains('hidden')) {
     formulario.classList.remove('hidden'); // Mostrar el formulario
@@ -74,17 +56,45 @@ function toggleForm() {
   console.log('Formulario después de cambiar:', formulario.classList);
 }
 
-
 // Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton'
 boton.addEventListener('click', toggleForm);
 cerrarBoton.addEventListener('click', toggleForm);
 
+// Cargar nameInput en companyData.name
 const nameInput = document.getElementById("companyNameInput")
 nameInput.value = companyData.name
 console.log(nameInput)
 
+// Cargar claimInput en companyData.claim
+const claimInput = document.getElementById("companyClaimInput")
+claimInput.value = companyData.claim
+console.log(claimInput)
 
+// Cargar textInput en companyData.claim
+const textInput = document.getElementById("companyTextInput")
+textInput.value = companyData.text
+console.log(textInput)
 
+// Cargar primaryColor en companyDta.primaryColor
+const primaryColorInput = document.getElementById("primaryColorInput")
+primaryColorInput.value = companyData.primaryColor
+console.log(primaryColorInput)
+
+// Cargar backgroundColor en companyDta.backgroundColor 
+const backgroundColorInput = document.getElementById("backgroundColorInput")
+backgroundColorInput.value = companyData.backgroundColor
+console.log(backgroundColorInput)
+
+// Cargar companyImageURLInput en companyDta.imageUrl 
+const companyImageURLInput = document.getElementById("companyImageURLInput")
+companyImageURLInput.value = companyData.companyImageURL
+console.log(companyImageURLInput)
+
+// saveButton carga los datos de "companyForm" en companyData
+function cargarFormulario(){
+  saveButtonDOM.addEventListener( , )
+  nameInput.value = companyData.name
+} 
 
 
 
