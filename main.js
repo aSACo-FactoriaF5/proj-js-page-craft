@@ -2,8 +2,8 @@ const companyData = {
   name: "TITULO RARO",
   claim: "We make the best widgets",
   text: "We are the best company in the world, except for the other companies that are better than us.",
-  primaryColor: "pink",    //base.css line11
-  backgroundColor: "blue", //base.css line10
+  primaryColor: "#2c5545",    //base.css line11
+  backgroundColor: "#e3e3e3", //base.css line10
   imageUrl:
     "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
 };
@@ -18,9 +18,11 @@ const claimDOM = document.getElementById("companyClaim")
 const textDOM = document.getElementById("companyText")
 const primaryColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
 const backgroundColorDOM = getComputedStyle(document.documentElement).getPropertyValue('--back-color');
-const saveButtonDOM = getElementById("buttonSave")
+const saveButtonDOM = document.getElementById("buttonSave")
 
+console.log(saveButtonDOM)
 
+function modifyDOM(){
 //modificacion de atributos
 tituloDOM.textContent = companyData.name     
 document.title = companyData.name
@@ -31,7 +33,9 @@ textDOM.textContent = companyData.text
 //cambiar el valor de las variables CSS
 root.style.setProperty('--primary-color', companyData.primaryColor);
 root.style.setProperty('--back-color', companyData.backgroundColor);
+}
 
+modifyDOM()
 
  //EPIC:2
  //id="editCompanyBtn"   onClick="desplegableFormulario"
@@ -87,18 +91,34 @@ console.log(backgroundColorInput)
 
 // Cargar companyImageURLInput en companyDta.imageUrl 
 const companyImageURLInput = document.getElementById("companyImageURLInput")
-companyImageURLInput.value = companyData.companyImageURL
+companyImageURLInput.value = companyData.imageUrl
 console.log(companyImageURLInput)
 
-// saveButton carga los datos de "companyForm" en companyData
-function cargarFormulario(){
-  saveButtonDOM.addEventListener( , )
-  nameInput.value = companyData.name
-} 
+
+// Evento para que saveButton guarde el contenido en companyData
+saveButtonDOM.addEventListener('click', function(event) {
+  event.preventDefault(); // Previene que la página se recargue si es un formulario
+
+  // Actualizar companyData con los valores del formulario
+  companyData.name = nameInput.value;
+  companyData.claim = claimInput.value;
+  companyData.text = textInput.value;
+  companyData.primaryColor = primaryColorInput.value;
+  companyData.backgroundColor = backgroundColorInput.value;
+  companyData.imageUrl = companyImageURLInput.value;
+
+  // Ver los datos actualizados en la consola
+  console.log('Datos guardados:', companyData);
+
+  modifyDOM()
+  toggleForm()
+});
 
 
 
 
+
+//function cargarFormulario(){}
 
 
 
