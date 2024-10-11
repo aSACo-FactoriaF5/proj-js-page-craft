@@ -79,6 +79,10 @@ function toggleForm() {
 boton.addEventListener('click', toggleForm);
 cerrarBoton.addEventListener('click', toggleForm);
 
+const nameInput = document.getElementById("companyNameInput")
+nameInput.value = companyData.name
+console.log(nameInput)
+
 
 
 
