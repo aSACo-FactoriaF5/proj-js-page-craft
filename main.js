@@ -102,31 +102,71 @@ saveButtonDOM.addEventListener('click', function(event) {
 
 
 //EPIC:3
+
 const companyProduct1Data = {
-  imageUrl:
-  "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
-  product: "TITULO RARO",
-  price: "We make the best widgets",
+  imageUrl1:
+  "https://cdn.pixabay.com/photo/2023/07/31/16/37/sugar-apple-8161386_960_720.jpg",
+  product1: "PRODUCTO 1",
+  price1: "100",
 };
 
 const companyProduct2Data = {
-  imageUrl:
-  "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
-  product: "TITULO RARO",
-  price: "We make the best widgets",
+  imageUrl2:
+  "https://cdn.pixabay.com/photo/2022/07/10/20/15/raspberries-7313700_960_720.jpg",
+  product2: "PRODUCTO 2",
+  price2: "200",
 };
 
 const companyProduct3Data = {
-  imageUrl:
-  "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
-  product: "TITULO RARO",
-  price: "We make the best widgets",
+  imageUrl3:
+  "https://cdn.pixabay.com/photo/2018/07/03/10/47/blueberries-3513547_960_720.jpg",
+  product3: "PRODUCTO 3",
+  price3: "300",
 };
 
-console.log(companyData);
+console.log(companyProduct1Data);
+console.log(companyProduct2Data);
+console.log(companyProduct3Data);
 
+const product1imageDOM = document.getElementById("imageProduct1")
+const product1nameDOM = document.getElementById("tittleProduct1")
+const product1priceDOM = document.getElementById("priceProduct1")
+const product2imageDOM = document.getElementById("imageProduct2")
+const product2nameDOM = document.getElementById("tittleProduct2")
+const product2priceDOM = document.getElementById("priceProduct2")
+const product3imageDOM = document.getElementById("imageProduct3")
+const product3nameDOM = document.getElementById("tittleProduct3")
+const product3priceDOM = document.getElementById("priceProduct3")
 const botonNovedades = document.getElementById("editwhats-newBtn")
+
+console.log(product1imageDOM)
+console.log(product1nameDOM)
+console.log(product1priceDOM)
+console.log(product2imageDOM)
+console.log(product2nameDOM)
+console.log(product2priceDOM)
+console.log(product3imageDOM)
+console.log(product3nameDOM)
+console.log(product3priceDOM)
 console.log(botonNovedades)
+
+//modificacion de atributosname
+
+product1imageDOM.setAttribute("src", companyProduct1Data.imageUrl1)
+product1nameDOM.textContent = companyProduct1Data.product1  
+product1priceDOM.textContent = companyProduct1Data.price1
+product2imageDOM.setAttribute("src", companyProduct2Data.imageUrl2)
+product2nameDOM.textContent = companyProduct2Data.product2  
+product2priceDOM.textContent = companyProduct2Data.price2
+product3imageDOM.setAttribute("src", companyProduct3Data.imageUrl3)
+product3nameDOM.textContent = companyProduct3Data.product3 
+product3priceDOM.textContent = companyProduct3Data.price3
+
+
+
+
+textDOM.textContent = companyData.text
+
 
 function toggleFormNews() {
   if (formulario.classList.contains('hidden')) {
