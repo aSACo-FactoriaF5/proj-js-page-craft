@@ -5,7 +5,7 @@ const companyData = {
   primaryColor: "#2c5545",    //base.css line11
   backgroundColor: "#e3e3e3", //base.css line10
   imageUrl:
-    "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+    "https://cdn.pixabay.com/photo/2018/06/14/13/38/bananas-3474872_960_720.jpg",
 };
 console.log(companyData);
 
@@ -35,12 +35,12 @@ root.style.setProperty('--back-color', companyData.backgroundColor);
 modifyDOM()
 
 
- //EPIC:2
- const formulario = document.getElementById('sectionCompanyForm'); 
- const boton = document.getElementById('editCompanyBtn'); 
- const cerrarBoton = document.getElementById('closeCompanyFormBtn') 
-
+//  EPIC:2
 //Funcion y Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' i 'cerrarBoton'
+const formulario = document.getElementById('sectionCompanyForm'); 
+const boton = document.getElementById('editCompanyBtn'); 
+const cerrarBoton = document.getElementById('closeCompanyFormBtn') 
+
 function toggleForm() {
   formulario.classList.toggle('hidden')
 }
@@ -78,23 +78,23 @@ saveButtonDOM.addEventListener('click', function(event) {
 });
 
 
-//EPIC:3 
+//  EPIC:3 
 //Definir const y Objetos companyProductData
 const companyProduct1Data = {
   imageUrl1:
-  "https://cdn.pixabay.com/photo/2023/07/31/16/37/sugar-apple-8161386_960_720.jpg",
+  "https://cdn.pixabay.com/photo/2015/05/31/13/43/flour-791840_1280.jpg",
   product1: "PRODUCTO 1",
   price1: "100",
 };
 const companyProduct2Data = {
   imageUrl2:
-  "https://cdn.pixabay.com/photo/2022/07/10/20/15/raspberries-7313700_960_720.jpg",
+  "https://media.istockphoto.com/id/1909401890/es/foto/woman-holding-jar-of-flour-in-hands.jpg?s=2048x2048&w=is&k=20&c=D9LAliXvIHB1Cvn_Caz42m-KHbdE1fFVDrQDWx5vVLI=",
   product2: "PRODUCTO 2",
   price2: "200",
 };
 const companyProduct3Data = {
   imageUrl3:
-  "https://cdn.pixabay.com/photo/2018/07/03/10/47/blueberries-3513547_960_720.jpg",
+  "https://media.istockphoto.com/id/1299271939/es/foto/pouring-k%C3%A9fir-casero-en-un-vaso-de-una-jarra.jpg?s=2048x2048&w=is&k=20&c=HTyW-vHfyfKzdI3GhJNeAQdruQdmfyVhtsOS7j42fNA=",
   product3: "PRODUCTO 3",
   price3: "300",
 };
@@ -111,7 +111,8 @@ const product2priceDOM = document.getElementById("priceProduct2")
 const product3imageDOM = document.getElementById("imageProduct3")
 const product3nameDOM = document.getElementById("tittleProduct3")
 const product3priceDOM = document.getElementById("priceProduct3")
-const botonNovedades = document.getElementById("editwhats-newBtn")
+const botonNovedadesDOM = document.getElementById("editwhats-newBtn")
+const saveButtonNovedadesDOM = document.getElementById("buttonSaveNovedades");
 
 console.log(product1imageDOM)
 console.log(product1nameDOM)
@@ -122,7 +123,7 @@ console.log(product2priceDOM)
 console.log(product3imageDOM)
 console.log(product3nameDOM)
 console.log(product3priceDOM)
-console.log(botonNovedades)
+console.log(botonNovedadesDOM)
 
 //modificacion de atributos News & Offers
 function modifyDOM2(){
@@ -171,10 +172,34 @@ product3ImageInput.value = companyProduct3Data.imageUrl3
 product3NameInput.value = companyProduct3Data.product3
 product3PriceInput.value = companyProduct3Data.price3
 
-//Evento save
-//actualizar companyProductData con los valores del novedadesFormulario
+//Evento para que novedadesBoton guarde el contenido en companyProductData
+saveButtonNovedadesDOM.addEventListener('click', function(event) {
+  //Previene que la página se recargue si es un formulario
+  event.preventDefault(); 
+  //Actualizar companyProductData con los valores del Formulario Novedades
+  companyProduct1Data.imageUrl1 = product1ImageInput.value
+  companyProduct1Data.product1 = product1NameInput.value
+  companyProduct1Data.price1 = product1PriceInput.value
 
-modifyDOM2()
+  companyProduct2Data.imageUrl2 = product2ImageInput.value
+  companyProduct2Data.product2 = product2NameInput.value
+  companyProduct2Data.price2 = product2PriceInput.value
 
+  companyProduct3Data.imageUrl3 = product3ImageInput.value
+  companyProduct3Data.product3 = product3NameInput.value
+  companyProduct3Data.price3 = product3PriceInput.value
+
+  modifyDOM2()
+  toggleForm()
+});
+
+
+  //Epic4: LocalStorage
+/*const saveToLocalStorage = () => {
+  const companyData ={
+    name: companyData.name,
+    claim: companyData.claim,
+  }
+}*/
 
 
