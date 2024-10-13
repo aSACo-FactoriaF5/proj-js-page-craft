@@ -189,6 +189,33 @@ novedadesCerrarBoton.addEventListener('click', toggleForm2);
 const product1ImageInput = document.getElementById("imageProduct1Input")
 product1ImageInput.value = companyProduct1Data.imageUrl1
 
+const product1NameInput = document.getElementById("nameProduct1Input")
+product1NameInput.value = companyProduct1Data.product1  
+
+const product1PriceInput = document.getElementById("priceProduct1Input")
+product1PriceInput.value = companyProduct1Data.price1 
+
+
+
+const product2ImageInput = document.getElementById("imageProduct2Input")
+product2ImageInput.value = companyProduct2Data.imageUrl2
+
+const product2NameInput = document.getElementById("nameProduct2Input")
+product2NameInput.value = companyProduct2Data.product2
+
+const product2PriceInput = document.getElementById("priceProduct2Input")
+product2PriceInput.value = companyProduct2Data.price2
+
+
+
+const product3ImageInput = document.getElementById("imageProduct3Input")
+product3ImageInput.value = companyProduct3Data.imageUrl3
+
+const product3NameInput = document.getElementById("nameProduct3Input")
+product3NameInput.value = companyProduct3Data.product3
+
+const product3PriceInput = document.getElementById("priceProduct3Input")
+product3PriceInput.value = companyProduct3Data.price3
 
 
 //Evento save
