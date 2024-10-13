@@ -167,9 +167,9 @@ product3priceDOM.textContent = companyProduct3Data.price3
 modifyDOM2()
 
 //Desplegar Formulario News & Offers
-const novedadesFormulario = document.getElementById('novedadesForm'); 
+const novedadesFormulario = document.getElementById('sectionNovedadesForm'); 
 const novedadesBoton = document.getElementById('editwhats-newBtn'); //editButton
-const novedadesCerrarBoton = document.getElementById('closeNovedadesForm') 
+const novedadesCerrarBoton = document.getElementById('closeNovedadesFormBtn') 
 
 // la siguiente función toggleForm() podría ser sustituida por "formulario.classList.toggle('hidden')"
 function toggleForm2() {
@@ -185,7 +185,6 @@ function toggleForm2() {
  novedadesFormulario.classList.toggle('hidden');
  console.log('Formulario después de cambiar:', novedadesFormulario.classList);
 }
-
 
 // Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton' News & Offers
 novedadesBoton.addEventListener('click', toggleForm2);
