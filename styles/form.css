@@ -1,4 +1,6 @@
 .form-container {
+  max-height: 95vh; /* altura maxima a 95% de la ventana visible */
+  overflow-y: auto; /* scroll vertical */
   margin: 20px;
   position: fixed;
   top: 0;

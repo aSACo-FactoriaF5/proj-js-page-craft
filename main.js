@@ -21,81 +21,58 @@ const backgroundColorDOM = getComputedStyle(document.documentElement).getPropert
 const saveButtonDOM = document.getElementById("buttonSave")
 
 function modifyDOM(){
+
 //modificacion de atributos
 tituloDOM.textContent = companyData.name     
 document.title = companyData.name
 claimDOM.textContent = companyData.claim
 imagenDOM.setAttribute("src", companyData.imageUrl)
 textDOM.textContent = companyData.text
-
 //cambiar el valor de las variables CSS
 root.style.setProperty('--primary-color', companyData.primaryColor);
 root.style.setProperty('--back-color', companyData.backgroundColor);
 }
-
 modifyDOM()
 
+
  //EPIC:2
- //id="editCompanyBtn"   onClick="desplegableFormulario"
  const formulario = document.getElementById('sectionCompanyForm'); 
- const boton = document.getElementById('editCompanyBtn'); //editButton
+ const boton = document.getElementById('editCompanyBtn'); 
  const cerrarBoton = document.getElementById('closeCompanyFormBtn') 
 
-// la siguiente función toggleForm() podría ser sustituida por "formulario.classList.toggle('hidden')"
+//Funcion y Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' i 'cerrarBoton'
 function toggleForm() {
-  if (formulario.classList.contains('hidden')) {
-    formulario.classList.remove('hidden'); // Mostrar el formulario
-  } else {
-    formulario.classList.add('hidden'); // Ocultar el formulario
-  }
+  formulario.classList.toggle('hidden')
 }
-
-function toggleForm() {
-  console.log('Formulario antes de cambiar:', formulario.classList);
-  formulario.classList.toggle('hidden');
-  console.log('Formulario después de cambiar:', formulario.classList);
-}
-
-// Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton'
 boton.addEventListener('click', toggleForm);
 cerrarBoton.addEventListener('click', toggleForm);
 
-// Cargar nameInput en companyData.name
+//Cargar valores Input del Formulario en companyData
 const nameInput = document.getElementById("companyNameInput")
-nameInput.value = companyData.name
-
-// Cargar claimInput en companyData.claim
+const companyImageURLInput = document.getElementById("companyImageURLInput")
 const claimInput = document.getElementById("companyClaimInput")
-claimInput.value = companyData.claim
-
-// Cargar textInput en companyData.claim
 const textInput = document.getElementById("companyTextInput")
-textInput.value = companyData.text
-
-// Cargar primaryColor en companyDta.primaryColor
 const primaryColorInput = document.getElementById("primaryColorInput")
-primaryColorInput.value = companyData.primaryColor
-
-// Cargar backgroundColor en companyDta.backgroundColor 
 const backgroundColorInput = document.getElementById("backgroundColorInput")
+
+nameInput.value = companyData.name
+companyImageURLInput.value = companyData.imageUrl
+claimInput.value = companyData.claim
+textInput.value = companyData.text
+primaryColorInput.value = companyData.primaryColor
 backgroundColorInput.value = companyData.backgroundColor
 
-// Cargar companyImageURLInput en companyDta.imageUrl 
-const companyImageURLInput = document.getElementById("companyImageURLInput")
-companyImageURLInput.value = companyData.imageUrl
-
-// Evento para que saveButton guarde el contenido en companyData
+//Evento para que saveButton guarde el contenido en companyData
 saveButtonDOM.addEventListener('click', function(event) {
-  event.preventDefault(); // Previene que la página se recargue si es un formulario
-
-// Actualizar companyData con los valores del formulario
+  //Previene que la página se recargue si es un formulario
+  event.preventDefault(); 
+  //Actualizar companyData con los valores del formulario
   companyData.name = nameInput.value;
   companyData.claim = claimInput.value;
   companyData.text = textInput.value;
   companyData.primaryColor = primaryColorInput.value;
   companyData.backgroundColor = backgroundColorInput.value;
   companyData.imageUrl = companyImageURLInput.value;
-
   modifyDOM()
   toggleForm()
 });
@@ -109,14 +86,12 @@ const companyProduct1Data = {
   product1: "PRODUCTO 1",
   price1: "100",
 };
-
 const companyProduct2Data = {
   imageUrl2:
   "https://cdn.pixabay.com/photo/2022/07/10/20/15/raspberries-7313700_960_720.jpg",
   product2: "PRODUCTO 2",
   price2: "200",
 };
-
 const companyProduct3Data = {
   imageUrl3:
   "https://cdn.pixabay.com/photo/2018/07/03/10/47/blueberries-3513547_960_720.jpg",
@@ -164,59 +139,37 @@ function modifyDOM2(){
 
 //toggle sectionNovedadesForm
 const novedadesFormulario = document.getElementById('sectionNovedadesForm'); 
-const novedadesBoton = document.getElementById('editwhats-newBtn'); //editButton
+const novedadesBoton = document.getElementById('editwhats-newBtn'); 
 const novedadesCerrarBoton = document.getElementById('closeNovedadesFormBtn') 
 
 function toggleForm2() {
-  if (novedadesFormulario.classList.contains('hidden')) {
-   novedadesFormulario.classList.remove('hidden'); // Mostrar el formulario
-  } else {
-   novedadesFormulario.classList.add('hidden'); // Ocultar el formulario
-  }
- }
- 
- function toggleForm2() {
-  console.log('Formulario antes de cambiar:', novedadesFormulario.classList);
   novedadesFormulario.classList.toggle('hidden');
-  console.log('Formulario después de cambiar:', novedadesFormulario.classList);
- }
+}
 
- // Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton' News & Offers
+//Eventos para abrir y cerrar el formulario al hacer clic en el botón 'NovedadesForm' & 'Cerrar boton' Novedades
 novedadesBoton.addEventListener('click', toggleForm2);
 novedadesCerrarBoton.addEventListener('click', toggleForm2);
 
 //cargar imageProduct1Input en companyProduct1Data
 const product1ImageInput = document.getElementById("imageProduct1Input")
-product1ImageInput.value = companyProduct1Data.imageUrl1
-
 const product1NameInput = document.getElementById("nameProduct1Input")
-product1NameInput.value = companyProduct1Data.product1  
-
 const product1PriceInput = document.getElementById("priceProduct1Input")
-product1PriceInput.value = companyProduct1Data.price1 
-
-
-
 const product2ImageInput = document.getElementById("imageProduct2Input")
-product2ImageInput.value = companyProduct2Data.imageUrl2
-
 const product2NameInput = document.getElementById("nameProduct2Input")
-product2NameInput.value = companyProduct2Data.product2
-
 const product2PriceInput = document.getElementById("priceProduct2Input")
-product2PriceInput.value = companyProduct2Data.price2
-
-
-
 const product3ImageInput = document.getElementById("imageProduct3Input")
-product3ImageInput.value = companyProduct3Data.imageUrl3
-
 const product3NameInput = document.getElementById("nameProduct3Input")
-product3NameInput.value = companyProduct3Data.product3
-
 const product3PriceInput = document.getElementById("priceProduct3Input")
-product3PriceInput.value = companyProduct3Data.price3
 
+product1ImageInput.value = companyProduct1Data.imageUrl1
+product1NameInput.value = companyProduct1Data.product1  
+product1PriceInput.value = companyProduct1Data.price1 
+product2ImageInput.value = companyProduct2Data.imageUrl2
+product2NameInput.value = companyProduct2Data.product2
+product2PriceInput.value = companyProduct2Data.price2
+product3ImageInput.value = companyProduct3Data.imageUrl3
+product3NameInput.value = companyProduct3Data.product3
+product3PriceInput.value = companyProduct3Data.price3
 
 //Evento save
 //actualizar companyProductData con los valores del novedadesFormulario
