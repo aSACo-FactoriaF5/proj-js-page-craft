@@ -30,3 +30,13 @@
   padding: 15px;
   line-height: 30px;
 }
+
+#editwhats-newBtn {
+  background-color: var(--back-color);
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 650px;
+  border-radius: var(--radius);
+}

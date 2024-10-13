@@ -57,39 +57,42 @@
       </div>
     </section>
 
-    <!-- whats-new -->
-    <section class="whats-new">     
+    <!-- Sección whats-new -->
+    <section class="whats-new">   
+      <button type="button" id="editwhats-newBtn" class="open-edit-form-button"> <!--onclick="toggleNovedadesForm()"  action""-->
+        <i class="fas fa-edit"></i> Edit News and Offers
+      </button>
       <div class="container">
-        <h2>NEWS & OFFERS</h2>
+        <h2>NEWS & OFFERS</h2>    
         <div class="product-grid">
-          <div class="product-card">
-            <img
+          <div class="product-card" id="productCard1">     <!-- companyProduct1Data.imageUrl -->
+            <img id="imageProduct1"
               src="https://c8.alamy.com/comp/2CH190N/photo-of-green-wet-vegetable-set-with-water-drops-2CH190N.jpg"
               alt="Green vegetables pack"
             />
             <div class="product-info">
-              <h3>Green Vegetables</h3>
-              <p>$9.99</p>
+              <h3 id="tittleProduct1">Green Vegetables</h3>   <!-- companyProduct1Data.product -->
+              <p id="priceProduct1">$9.99</p>                <!-- companyProduct1Data.price -->
             </div>
           </div>
-          <div class="product-card">
-            <img
+          <div class="product-card" id="productCard2">     
+            <img id="imageProduct2"       
               src="https://www.fruitypack.com/assets/files/w-star-mix-1.960x640.jpg"
               alt="Fruit cart packs"
             />
             <div class="product-info">
-              <h3>Fruit Pack</h3>
-              <p>$14.99</p>
+              <h3 id="tittleProduct2">Fruit Pack</h3>   
+              <p id="priceProduct2">$14.99</p>
             </div>
           </div>
-          <div class="product-card">
-            <img
+          <div class="product-card" id="productCard3">
+            <img id="imageProduct3" 
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEX1cf3cY-2yQOnyP2eWFnqUy9G5B5gbyP2Q&s"
               alt="Lemons & orange packs"
             />
             <div class="product-info">
-              <h3>Lemons and Oranges</h3>
-              <p>$7.99</p>
+              <h3  id="tittleProduct3">Lemons and Oranges</h3>
+              <p id="priceProduct3">$7.99</p>
             </div>
           </div>
         </div>
@@ -132,4 +135,30 @@
       </form>
     </section>
   </body>
+
+  <section class="form-container hidden" id="sectionNovedadesForm">
+    <div class="close-from-button" id="closeNovedadesFormBtn">
+      <span>x</span>
+    </div>
+    <form action="" id="novedadesForm">
+      <label for="product-image">Imagen URL del Producto /label>
+      <input
+        type="url"
+        name="product-image"
+        id="productImageURLInput"
+        required
+      />
+
+      <label for="product"> Nombre del Producto</label>
+      <input type="text" name="product" id="nameProductInput" />
+
+      <label for="price-product"> Precio del Producto</label>
+      <input type="text" name="price-product" id="priceProductInput" />
+
+      <button id="buttonSaveNovedades" type="submit" value="Submit" >Save</button>
+    </form>
+
+
+  </section>
+
 </html>
