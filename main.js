@@ -101,7 +101,8 @@ saveButtonDOM.addEventListener('click', function(event) {
 });
 
 
-//EPIC:3
+//EPIC:3 
+//Definir Objetos Constantes
 
 const companyProduct1Data = {
   imageUrl1:
@@ -150,8 +151,8 @@ console.log(product3nameDOM)
 console.log(product3priceDOM)
 console.log(botonNovedades)
 
-//modificacion de atributosname
-
+//modificacion de atributos News & Offers
+function modifyDOM2(){
 product1imageDOM.setAttribute("src", companyProduct1Data.imageUrl1)
 product1nameDOM.textContent = companyProduct1Data.product1  
 product1priceDOM.textContent = companyProduct1Data.price1
@@ -161,26 +162,31 @@ product2priceDOM.textContent = companyProduct2Data.price2
 product3imageDOM.setAttribute("src", companyProduct3Data.imageUrl3)
 product3nameDOM.textContent = companyProduct3Data.product3 
 product3priceDOM.textContent = companyProduct3Data.price3
-
-
-
-
-textDOM.textContent = companyData.text
-
-
-function toggleFormNews() {
-  if (formulario.classList.contains('hidden')) {
-    formulario.classList.remove('hidden'); // Mostrar el formulario
-  } else {
-    formulario.classList.add('hidden'); // Ocultar el formulario
-  }
 }
 
-function toggleFormNews() {
-  console.log('Formulario antes de cambiar:', formulario.classList);
-  formulario.classList.toggle('hidden');
-  console.log('Formulario después de cambiar:', formulario.classList);
+modifyDOM2()
+
+//Desplegar Formulario News & Offers
+const novedadesFormulario = document.getElementById('novedadesForm'); 
+const novedadesBoton = document.getElementById('editwhats-newBtn'); //editButton
+const novedadesCerrarBoton = document.getElementById('closeNovedadesForm') 
+
+// la siguiente función toggleForm() podría ser sustituida por "formulario.classList.toggle('hidden')"
+function toggleForm2() {
+ if (novedadesFormulario.classList.contains('hidden')) {
+  novedadesFormulario.classList.remove('hidden'); // Mostrar el formulario
+ } else {
+  novedadesFormulario.classList.add('hidden'); // Ocultar el formulario
+ }
+}
+
+function toggleForm2() {
+ console.log('Formulario antes de cambiar:', novedadesFormulario.classList);
+ novedadesFormulario.classList.toggle('hidden');
+ console.log('Formulario después de cambiar:', novedadesFormulario.classList);
 }
 
 
-
+// Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton' News & Offers
+novedadesBoton.addEventListener('click', toggleForm2);
+novedadesCerrarBoton.addEventListener('click', toggleForm2);
