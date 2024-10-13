@@ -102,8 +102,7 @@ saveButtonDOM.addEventListener('click', function(event) {
 
 
 //EPIC:3 
-//Definir Objetos Constantes
-
+//Definir const y Objetos companyProductData
 const companyProduct1Data = {
   imageUrl1:
   "https://cdn.pixabay.com/photo/2023/07/31/16/37/sugar-apple-8161386_960_720.jpg",
@@ -124,7 +123,6 @@ const companyProduct3Data = {
   product3: "PRODUCTO 3",
   price3: "300",
 };
-
 console.log(companyProduct1Data);
 console.log(companyProduct2Data);
 console.log(companyProduct3Data);
@@ -153,39 +151,50 @@ console.log(botonNovedades)
 
 //modificacion de atributos News & Offers
 function modifyDOM2(){
-product1imageDOM.setAttribute("src", companyProduct1Data.imageUrl1)
-product1nameDOM.textContent = companyProduct1Data.product1  
-product1priceDOM.textContent = companyProduct1Data.price1
-product2imageDOM.setAttribute("src", companyProduct2Data.imageUrl2)
-product2nameDOM.textContent = companyProduct2Data.product2  
-product2priceDOM.textContent = companyProduct2Data.price2
-product3imageDOM.setAttribute("src", companyProduct3Data.imageUrl3)
-product3nameDOM.textContent = companyProduct3Data.product3 
-product3priceDOM.textContent = companyProduct3Data.price3
-}
+  product1imageDOM.setAttribute("src", companyProduct1Data.imageUrl1)
+  product1nameDOM.textContent = companyProduct1Data.product1  
+  product1priceDOM.textContent = companyProduct1Data.price1
+  product2imageDOM.setAttribute("src", companyProduct2Data.imageUrl2)
+  product2nameDOM.textContent = companyProduct2Data.product2  
+  product2priceDOM.textContent = companyProduct2Data.price2
+  product3imageDOM.setAttribute("src", companyProduct3Data.imageUrl3)
+  product3nameDOM.textContent = companyProduct3Data.product3 
+  product3priceDOM.textContent = companyProduct3Data.price3
+  }
 
-modifyDOM2()
-
-//Desplegar Formulario News & Offers
+//toggle sectionNovedadesForm
 const novedadesFormulario = document.getElementById('sectionNovedadesForm'); 
 const novedadesBoton = document.getElementById('editwhats-newBtn'); //editButton
 const novedadesCerrarBoton = document.getElementById('closeNovedadesFormBtn') 
 
-// la siguiente función toggleForm() podría ser sustituida por "formulario.classList.toggle('hidden')"
 function toggleForm2() {
- if (novedadesFormulario.classList.contains('hidden')) {
-  novedadesFormulario.classList.remove('hidden'); // Mostrar el formulario
- } else {
-  novedadesFormulario.classList.add('hidden'); // Ocultar el formulario
+  if (novedadesFormulario.classList.contains('hidden')) {
+   novedadesFormulario.classList.remove('hidden'); // Mostrar el formulario
+  } else {
+   novedadesFormulario.classList.add('hidden'); // Ocultar el formulario
+  }
  }
-}
+ 
+ function toggleForm2() {
+  console.log('Formulario antes de cambiar:', novedadesFormulario.classList);
+  novedadesFormulario.classList.toggle('hidden');
+  console.log('Formulario después de cambiar:', novedadesFormulario.classList);
+ }
 
-function toggleForm2() {
- console.log('Formulario antes de cambiar:', novedadesFormulario.classList);
- novedadesFormulario.classList.toggle('hidden');
- console.log('Formulario después de cambiar:', novedadesFormulario.classList);
-}
-
-// Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton' News & Offers
+ // Eventos para abrir y cerrar el formulario al hacer clic en el botón 'Edit Company' & 'Cerrar boton' News & Offers
 novedadesBoton.addEventListener('click', toggleForm2);
 novedadesCerrarBoton.addEventListener('click', toggleForm2);
+
+//cargar imageProduct1Input en companyProduct1Data
+const product1ImageInput = document.getElementById("imageProduct1Input")
+product1ImageInput.value = companyProduct1Data.imageUrl1
+
+
+
+//Evento save
+//actualizar companyProductData con los valores del novedadesFormulario
+
+modifyDOM2()
+
+
+
