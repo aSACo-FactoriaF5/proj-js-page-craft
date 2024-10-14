@@ -5,7 +5,7 @@ PageCraft es un proyecto que consiste en desarrollar la parte lógica de una apl
 # Demostración en vivo: 
 
 Acceder a la aplicación en el siguiente enlace:
-[TITULO RARO (asaco-factoriaf5.github.io)](TITULO RARO (asaco-factoriaf5.github.io))
+[Deployment](asaco-factoriaf5.github.io)]
 
 # Tecnologías Utilizadas
 
@@ -16,25 +16,23 @@ Git: Para el control de versiones y la gestión del proyecto.
 
 
 # Estructura del Proyecto
-├── styles
-
-├── images
-
-	 ├── base.css
-  
-	 ├── form.css
-  
-	 ├── header.css
-  
-	 ├── hero.css
-  
-	 ├── whats-new.css
-  
-├── index.html
-
-├── main.js
-
-├── styles.css
+	├── styles
+		
+		 ├── base.css
+	  
+		 ├── form.css
+	  
+		 ├── header.css
+	  
+		 ├── hero.css
+	  
+		 ├── whats-new.css
+	  
+	├── index.html
+	
+	├── main.js
+	
+	├── styles.css
 
 # Miembros del Equipo de Proyecto
 
