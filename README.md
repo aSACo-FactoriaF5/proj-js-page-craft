@@ -26,7 +26,7 @@ Git: Para el control de versiones y la gestión del proyecto.
 
 - Sergi Asins
 - Andrea Celmare
-- Cristian Osla López
+- Cristian Osal López
 - David Méndez
 
 # Tasks Realizados
