@@ -182,7 +182,7 @@ saveButtonNovedadesDOM.addEventListener('click', function(event) {
 
   //Epic4: Guardar los datos en Local Storage
 const companyDataToSave = () => {
-  const dataToSave  ={
+  const dataToSave = {
     name: companyData.name,
     claim: companyData.claim,
     text: companyData.text,
@@ -191,54 +191,82 @@ const companyDataToSave = () => {
     imageUrl: companyData.imageUrl
   };
 
-  const companyProductsToSave = {
+  localStorage.setItem("companyData", JSON.stringify(dataToSave));
+};
+
+const companyProductsToSave = () => {
+  const productsToSave = {
     product1: {
       imageUrl: companyProduct1Data.imageUrl1,
       name: companyProduct1Data.product1,
-      price: companyProduct1Data.price1,
+      price: companyProduct1Data.price1
     },
     product2: {
       imageUrl: companyProduct2Data.imageUrl2,
       name: companyProduct2Data.product2,
-      price: companyProduct2Data.price2,
+      price: companyProduct2Data.price2
     },
     product3: {
       imageUrl: companyProduct3Data.imageUrl3,
       name: companyProduct3Data.product3,
-      price: companyProduct3Data.price3,
+      price: companyProduct3Data.price3
     },
   };
-
-//Guardar los datos de la empresa y los productos en LocalStorage
-localStorage.setItem("companyData", JSON.stringify(dataToSave));
-localStorage.setItem("companyProducts", JSON.stringify(companyProductsToSave));
-console.log("Datos guardados en Local Storage!");
-console.log(localStorage.setItem("companyData", JSON.stringify(dataToSave)))
-console.log(localStorage.setItem("companyProducts", JSON.stringify(companyProductsToSave)))
+  localStorage.setItem("companyProducts", JSON.stringify(productsToSave));
 };
 
-//guarda cuando el usuario haga clic en "Save"
-saveButtonDOM.addEventListener("click", companyDataToSave)
+// funciones después de actualizar los datos en los formularios
+saveButtonDOM.addEventListener('click', function(event) {
+  event.preventDefault();
+  modifyDOM();
+  companyDataToSave(); 
+  toggleForm();
+});
 
-//función de carga
-const loadFromLocalStorage = () => {
-  const savedCompanyData = JSON.parse(localStorage.getItem("companyData"));
-  const savedCompanyProducts = JSON.parse(localStorage.getItem("companyProducts"));
+saveButtonNovedadesDOM.addEventListener('click', function(event) {
+  event.preventDefault();
+  modifyDOM2();
+  companyProductsToSave();
+  toggleForm2();
+});
 
-  //Cargar los datos en companyData
-  if (savedCompanyData) {
-    companyData = savedCompanyData; 
-    modifyDOM();
+
+//Cargar los datos desde LocalStorage
+const loadCompanyData = () => {
+  const storedData = localStorage.getItem("companyData");
+  if (storedData) {
+    const data = JSON.parse(storedData);
+    companyData.name = data.name;
+    companyData.claim = data.claim;
+    companyData.text = data.text;
+    companyData.primaryColor = data.primaryColor;
+    companyData.backgroundColor = data.backgroundColor;
+    companyData.imageUrl = data.imageUrl;
+
+    modifyDOM(); 
   }
+};
 
-  //Cargar los datos de productos
-  if (savedCompanyProducts) {
-    companyProduct1Data = savedCompanyProducts.product1;
-    companyProduct2Data = savedCompanyProducts.product2;
-    companyProduct3Data = savedCompanyProducts.product3;
+const loadCompanyProductsData = () => {
+  const storedProducts = localStorage.getItem("companyProducts");
+  if (storedProducts) {
+    const products = JSON.parse(storedProducts);
+    companyProduct1Data.imageUrl1 = products.product1.imageUrl;
+    companyProduct1Data.product1 = products.product1.name;
+    companyProduct1Data.price1 = products.product1.price;
+    companyProduct2Data.imageUrl2 = products.product2.imageUrl;
+    companyProduct2Data.product2 = products.product2.name;
+    companyProduct2Data.price2 = products.product2.price;
+    companyProduct3Data.imageUrl3 = products.product3.imageUrl;
+    companyProduct3Data.product3 = products.product3.name;
+    companyProduct3Data.price3 = products.product3.price;
+
     modifyDOM2(); 
   }
 };
 
-// Cargar datos al cargar la página
-window.addEventListener("load", loadFromLocalStorage);
+// Cargar los datos cuando la página se cargue
+window.onload = () => {
+  loadCompanyData();
+  loadCompanyProductsData();
+};
