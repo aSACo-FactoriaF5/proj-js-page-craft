@@ -34,11 +34,6 @@ Git: Para el control de versiones y la gestión del proyecto.
 	
 	├── styles.css
 
-## Capturas de Pantalla
-### Pagina 1
-
-![Pagina1](page 1.png)	
-
 
 ## Miembros del Equipo de Proyecto
 
