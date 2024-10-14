@@ -1,6 +1,11 @@
 # Descripción
 
-Este proyecto consiste en .
+PageCraft es un proyecto que consiste en desarrollar la parte lógica de una aplicación web que es personalizable. En la página web se pueden cambiar elementos html y css desde los Inputs introudcidos en los formularios de la web.
+
+# Demostración en vivo: 
+
+Acceder a la aplicación en el siguiente enlace:
+[TITULO RARO (asaco-factoriaf5.github.io)](TITULO RARO (asaco-factoriaf5.github.io))
 
 # Tecnologías Utilizadas
 
@@ -12,44 +17,31 @@ Git: Para el control de versiones y la gestión del proyecto.
 
 # Estructura del Proyecto
 ├── styles
+
 ├── images
+
 	 ├── base.css
+  
 	 ├── form.css
+  
 	 ├── header.css
+  
 	 ├── hero.css
+  
 	 ├── whats-new.css
+  
 ├── index.html
+
 ├── main.js
+
 ├── styles.css
 
 # Miembros del Equipo de Proyecto
 
-- Sergi Asins
-- Andrea Celmare
-- Cristian Osal López
-- David Méndez
-
-# Tasks Realizados
-[x]Epic 1
-[x]Epic 2
-[x]Epic 3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Sergi Asins [https://github.com/SergiAsins]
+- Andrea Celmare [https://github.com/andreeaclmr]
+- Cristian Osla López [https://github.com/Cristian171278]
+- David Méndez [https://github.com/vadixter]
 
 -------------------
 # PageCraft
