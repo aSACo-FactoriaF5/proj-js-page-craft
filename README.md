@@ -34,11 +34,17 @@ Git: Para el control de versiones y la gestión del proyecto.
 	
 	├── styles.css
 
+## Capturas de pantalla
+
+### Home Page
+
+![Image Home Page](https://github.com/aSACo-FactoriaF5/proj-js-page-craft/blob/main/page%201.png)
+
 
 ## Miembros del Equipo de Proyecto
 
 - Sergi Asins [https://github.com/SergiAsins]
-- Andrea Celmare [https://github.com/andreeaclmr]
+- Andreea Celmare [https://github.com/andreeaclmr]
 - Cristian Osla López [https://github.com/Cristian171278]
 - David Méndez [https://github.com/vadixter]
 
