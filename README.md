@@ -37,7 +37,7 @@ Git: Para el control de versiones y la gestión del proyecto.
 ## Capturas de Pantalla
 ### Pagina 1
 
-![Pagina1](relative%20path/to/Images/page 1.png)	
+![Pagina1](page 1.png)	
 
 
 ## Miembros del Equipo de Proyecto
