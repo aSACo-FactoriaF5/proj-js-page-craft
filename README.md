@@ -40,6 +40,16 @@ Git: Para el control de versiones y la gestión del proyecto.
 
 ![Image Home Page](https://github.com/aSACo-FactoriaF5/proj-js-page-craft/blob/main/page%201.png)
 
+### Formulario 1 Desplegable
+
+![Image Formulario 1 Desplegable](https://github.com/aSACo-FactoriaF5/proj-js-page-craft/blob/main/form%20epica%202.png)
+
+### Formulario 2 Desplegable - Epica 3
+![Image Formulario 2 Desplegable](https://github.com/aSACo-FactoriaF5/proj-js-page-craft/blob/main/form%20epica%203.png)
+
+### Formulario 3 Cambios - Epica 3
+![Image Formulario 3 Cambios](https://github.com/aSACo-FactoriaF5/proj-js-page-craft/blob/main/cambios%20epica%203.png)
+
 
 ## Miembros del Equipo de Proyecto
 
