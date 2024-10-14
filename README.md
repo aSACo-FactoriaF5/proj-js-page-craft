@@ -22,10 +22,10 @@ Git: Para el control de versiones y la gestión del proyecto.
 - Cristian Osla López
 - David Méndez
 
-#Tasks Realizados
-(x)Epic 1
-(x)Epic 2
-(x)Epic 3
+# Tasks Realizados
+[x]Epic 1
+[x]Epic 2
+[x]Epic 3
 
 
 
