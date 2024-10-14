@@ -7,6 +7,8 @@ PageCraft es un proyecto que consiste en desarrollar la parte lógica de una apl
 Acceder a la aplicación en el siguiente enlace:
 [(https://asaco-factoriaf5.github.io/proj-js-page-craft/)](https://asaco-factoriaf5.github.io/proj-js-page-craft/)]
 
+![Locos](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExamNtOHQ1cDZ6eHRqYjh2a2hnc3dkb3ZxdXZvMXp5amIyd2JlOGxpZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/WlOsGtKFnAFWum5HyK/giphy.gif)
+
 ## Tecnologías Utilizadas
 
 HTML5: Para estructurar el contenido de la página.
