@@ -98,9 +98,6 @@ const companyProduct3Data = {
   product3: "PRODUCTO 3",
   price3: "300",
 };
-console.log(companyProduct1Data);
-console.log(companyProduct2Data);
-console.log(companyProduct3Data);
 
 const product1imageDOM = document.getElementById("imageProduct1")
 const product1nameDOM = document.getElementById("tittleProduct1")
@@ -113,17 +110,6 @@ const product3nameDOM = document.getElementById("tittleProduct3")
 const product3priceDOM = document.getElementById("priceProduct3")
 const botonNovedadesDOM = document.getElementById("editwhats-newBtn")
 const saveButtonNovedadesDOM = document.getElementById("buttonSaveNovedades");
-
-console.log(product1imageDOM)
-console.log(product1nameDOM)
-console.log(product1priceDOM)
-console.log(product2imageDOM)
-console.log(product2nameDOM)
-console.log(product2priceDOM)
-console.log(product3imageDOM)
-console.log(product3nameDOM)
-console.log(product3priceDOM)
-console.log(botonNovedadesDOM)
 
 //modificacion de atributos News & Offers
 function modifyDOM2(){
@@ -194,12 +180,65 @@ saveButtonNovedadesDOM.addEventListener('click', function(event) {
 });
 
 
-  //Epic4: LocalStorage
-/*const saveToLocalStorage = () => {
-  const companyData ={
+  //Epic4: Guardar los datos en Local Storage
+const companyDataToSave = () => {
+  const dataToSave  ={
     name: companyData.name,
     claim: companyData.claim,
+    text: companyData.text,
+    primaryColor: companyData.primaryColor,
+    backgroundColor: companyData.backgroundColor,
+    imageUrl: companyData.imageUrl
+  };
+
+  const companyProductsToSave = {
+    product1: {
+      imageUrl: companyProduct1Data.imageUrl1,
+      name: companyProduct1Data.product1,
+      price: companyProduct1Data.price1,
+    },
+    product2: {
+      imageUrl: companyProduct2Data.imageUrl2,
+      name: companyProduct2Data.product2,
+      price: companyProduct2Data.price2,
+    },
+    product3: {
+      imageUrl: companyProduct3Data.imageUrl3,
+      name: companyProduct3Data.product3,
+      price: companyProduct3Data.price3,
+    },
+  };
+
+//Guardar los datos de la empresa y los productos en LocalStorage
+localStorage.setItem("companyData", JSON.stringify(dataToSave));
+localStorage.setItem("companyProducts", JSON.stringify(companyProductsToSave));
+console.log("Datos guardados en Local Storage!");
+console.log(localStorage.setItem("companyData", JSON.stringify(dataToSave)))
+console.log(localStorage.setItem("companyProducts", JSON.stringify(companyProductsToSave)))
+};
+
+//guarda cuando el usuario haga clic en "Save"
+saveButtonDOM.addEventListener("click", companyDataToSave)
+
+//función de carga
+const loadFromLocalStorage = () => {
+  const savedCompanyData = JSON.parse(localStorage.getItem("companyData"));
+  const savedCompanyProducts = JSON.parse(localStorage.getItem("companyProducts"));
+
+  //Cargar los datos en companyData
+  if (savedCompanyData) {
+    companyData = savedCompanyData; 
+    modifyDOM();
   }
-}*/
 
+  //Cargar los datos de productos
+  if (savedCompanyProducts) {
+    companyProduct1Data = savedCompanyProducts.product1;
+    companyProduct2Data = savedCompanyProducts.product2;
+    companyProduct3Data = savedCompanyProducts.product3;
+    modifyDOM2(); 
+  }
+};
 
+// Cargar datos al cargar la página
+window.addEventListener("load", loadFromLocalStorage);
