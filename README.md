@@ -1,3 +1,50 @@
+#Descripción
+
+Este proyecto consiste en .
+
+#Tecnologías Utilizadas
+
+HTML5: Para estructurar el contenido de la página.
+CSS3: Para estilizar y maquetar el contenido, usando Flexbox y Grid.
+JavaScript: 
+Git: Para el control de versiones y la gestión del proyecto.
+
+
+#Estructura del Proyecto
+
+
+
+
+#Miembros del Equipo de Proyecto
+
+- Sergi Asins
+- Andrea Celmare
+- Cristian Osla López
+- David Méndez
+
+#Tasks Realizados
+[x] Epic 1
+[x] Epic 2
+[x] Epic 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------
 # PageCraft
 
 ## 🚀 **Briefing del Proyecto: PageCraft**
