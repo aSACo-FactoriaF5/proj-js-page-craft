@@ -6,7 +6,7 @@ Este proyecto consiste en .
 
 HTML5: Para estructurar el contenido de la página.
 CSS3: Para estilizar y maquetar el contenido, usando Flexbox y Grid.
-JavaScript: 
+JavaScript: Para vincular modificaciones de funciones, datos, y variables en el HTML
 Git: Para el control de versiones y la gestión del proyecto.
 
 
