@@ -1,13 +1,13 @@
-# Descripción
+## Descripción
 
 PageCraft es un proyecto que consiste en desarrollar la parte lógica de una aplicación web que es personalizable. En la página web se pueden cambiar elementos html y css desde los Inputs introudcidos en los formularios de la web.
 
-# Demostración en vivo: 
+## Demostración en vivo: 
 
 Acceder a la aplicación en el siguiente enlace:
-[Deployment](asaco-factoriaf5.github.io)]
+[(https://asaco-factoriaf5.github.io/proj-js-page-craft/)](https://asaco-factoriaf5.github.io/proj-js-page-craft/)]
 
-# Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 HTML5: Para estructurar el contenido de la página.
 CSS3: Para estilizar y maquetar el contenido, usando Flexbox y Grid.
@@ -15,7 +15,7 @@ JavaScript: Para vincular modificaciones de funciones, datos, y variables en el 
 Git: Para el control de versiones y la gestión del proyecto.
 
 
-# Estructura del Proyecto
+## Estructura del Proyecto
 	├── styles
 		
 		 ├── base.css
@@ -34,7 +34,7 @@ Git: Para el control de versiones y la gestión del proyecto.
 	
 	├── styles.css
 
-# Miembros del Equipo de Proyecto
+## Miembros del Equipo de Proyecto
 
 - Sergi Asins [https://github.com/SergiAsins]
 - Andrea Celmare [https://github.com/andreeaclmr]
