@@ -37,7 +37,7 @@ Git: Para el control de versiones y la gestión del proyecto.
 ## Capturas de Pantalla
 ### Pagina 1
 
-![Pagina1](ruta//Users/andreea/Desktop/Factoria_F5/Semana 2/PageCraft/proj-js-page-craft/Images/page 1.png)	
+![Pagina1](ruta/Users/andreea/Desktop/Factoria_F5/Semana 2/PageCraft/proj-js-page-craft/Images/page 1.png)	
 
 
 ## Miembros del Equipo de Proyecto
